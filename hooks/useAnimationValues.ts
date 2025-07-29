@@ -87,10 +87,9 @@ export function useAnimationValues(screenWidth: number): AnimationValues {
       ["transparent", "#000"]
     );
 
-    // Make header appear earlier and more gradually
     headerOpacity.value = interpolate(
       currentScrollY.value,
-      [20, MAX_SCROLL_Y - 10], // Starts at scroll position 20, fully visible at 60
+      [20, MAX_SCROLL_Y - 10],
       [0, 1],
       {
         extrapolateLeft: Extrapolate.CLAMP,
